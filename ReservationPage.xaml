@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PetHotelApplication.ReservationPage"
+             Title="ReservationPage">
+    <ScrollView>
+        <StackLayout Margin="20">
+
+            <!-- Detalii rezervare -->
+            <Label Text="Reservation Details" FontSize="24" FontAttributes="Bold" />
+
+            <!-- Informații despre proprietar și animal -->
+            
+            <Label Text="Owner Name" FontSize="16" />
+            <Entry Placeholder="Enter owner's name" Text="{Binding OwnerName}" />
+
+     
+            <Label Text="Pet Name" FontSize="16" />
+            <Entry Placeholder="Enter pet's name" Text="{Binding PetName}" />
+
+            <Label Text="Pet Breed" FontSize="16" />
+            <Entry Placeholder="Enter pet's breed" Text="{Binding PetBreed}" />
+
+            <Label Text="Pet" FontSize="16" />
+            <Picker Title="Select pet" SelectedItem="{Binding PetGender}">
+                <Picker.Items>
+                    <x:String>Cat</x:String>
+                    <x:String>Dog</x:String>
+                </Picker.Items>
+            </Picker>
+
+            <!-- Informații despre rezervare -->
+         
+            <Label Text="Check-In Date" FontSize="16" />
+            <DatePicker Date="{Binding CheckInDate}" />
+            <DatePicker x:Name="checkInDatePicker" Date="{Binding CheckInDate}" />
+
+
+            <Label Text="Check-Out Date" FontSize="16" />
+            <DatePicker Date="{Binding CheckOutDate}" />
+
+            <!-- Informații despre cameră -->
+           
+            <Label Text="Select Room Type" FontSize="16" />
+            <Picker Title="Choose room type" SelectedItem="{Binding RoomType}">
+                <Picker.Items>
+                    <x:String>Standard</x:String>
+                    <x:String>Standard Plus</x:String>
+                    <x:String>Premium</x:String>
+                    <x:String>Cameră Pisici</x:String>
+                </Picker.Items>
+            </Picker>
+
+            <!-- Contact Information -->
+    
+            <Label Text="Phone Number" FontSize="16" />
+            <Entry Placeholder="Enter phone number" Text="{Binding PhoneNumber}" Keyboard="Telephone" />
+
+            <Label Text="Email" FontSize="16" />
+            <Entry Placeholder="Enter email address" Text="{Binding Email}" Keyboard="Email" />
+
+            <!-- Acțiuni -->
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+
+                <!-- Salvare și ștergere rezervare -->
+                <Button Text="Save" Clicked="OnSaveButtonClicked" />
+                <Button Grid.Column="1" Text="Delete" Clicked="OnDeleteButtonClicked" Margin="10,0,0,0" />
+            </Grid>
+
+            <!-- Afișare detalii rezervare -->
+            <Label Text="Room Extra Needs" FontSize="20" FontAttributes="Bold" />
+            <ListView x:Name="listView" Margin="20">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <TextCell Detail="{Binding Description}" />
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+
+            <!-- Adăugare/Selectare cameră pentru rezervare -->
+            <Button Text="Add Room Extra Needs" MaximumWidthRequest="300" Clicked="OnChooseButtonClicked" Margin="0,20,0,0" />
+        </StackLayout>
+    </ScrollView>
+</ContentPage>

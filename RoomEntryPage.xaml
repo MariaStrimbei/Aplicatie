@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PetHotelApplication.RoomEntryPage"
+             Title="Rooms">
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout>
+                <Image Source="basic_room_image.jpg" HeightRequest="250" Aspect="AspectFill" />
+                <Label Text="Cameră Standard" FontSize="20" FontAttributes="Bold" />
+                <Label Text="Camerele standard sunt camerele simple. Sunt decorate pentru a crea un spațiu primitor și călduros." FontSize="16" />
+                <Label Text="Preț: 50 lei/zi" FontSize="16" />
+
+                <Image Source="comfort_room_image.jpg" HeightRequest="250" Aspect="AspectFill" />
+                <Label Text="Cameră Standard Plus" FontSize="20" FontAttributes="Bold" />
+                <Label Text="Camerele standard+ sunt camere simple cu terasă. Sunt recomandate cățeilor care sunt obișnuiți cu ieșiri dese afară." FontSize="16" />
+                <Label Text="Preț: 70 lei/zi" FontSize="16" />
+
+                <Image Source="comfort_plus_room_image.jpg" HeightRequest="250" Aspect="AspectFill" />
+                <Label Text="Cameră Premium" FontSize="20" FontAttributes="Bold" />
+                <Label Text="Camerele premium le putem descrie ca o mini simulare a unei camere de apartament. Aici cățeii se vor simți ca acasă." FontSize="16" />
+                <Label Text="Preț: 100 lei/zi" FontSize="16" />
+
+                <Image Source="camera_pisici.jpg" HeightRequest="250" Aspect="AspectFill" />
+                <Label Text="Cameră pentru Pisici" FontSize="20" FontAttributes="Bold" />
+                <Label Text="Camerele pentru pisici sunt complet echipate și amenajate pentru a satisface nevoile tuturor felinelor." FontSize="16" />
+            
+                <Label Text="Preț: 40 lei/zi" FontSize="16" />
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

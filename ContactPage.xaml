@@ -1,0 +1,18 @@
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PetHotelApplication.ContactPage"
+             Title="Contact">
+
+    <StackLayout Padding="20">
+        <Label Text="Găsiți-ne:" FontSize="24" FontAttributes="Bold" TextColor="Blue" />
+
+        <Label Text="Adresă: Strada Fericirii, Nr. 42" FontSize="18" />
+        <Label Text="Telefon: 0768 908 231" FontSize="18" />
+        <Label Text="Email:" FontSize="18" Margin="0,5,0,0" />
+        <Label Text="happypets@gmail.com" FontSize="18" Margin="0,0,0,20" />
+
+        <Label Text="Aplicație destinată monitorizării rezervărilor pentru patrupedul tău!" FontSize="20" FontAttributes="Italic" Margin="0,20,0,0" />
+
+        <Image Source="pets.jpg" HeightRequest="200" WidthRequest="200" Margin="0,20,0,0" />
+    </StackLayout>
+</ContentPage>

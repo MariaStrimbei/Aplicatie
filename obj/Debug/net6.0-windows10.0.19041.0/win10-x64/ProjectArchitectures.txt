@@ -1,0 +1,1 @@
+C:\projects\aplicatie medii\PetHotelApplication\PetHotelApplication.csproj;x64
